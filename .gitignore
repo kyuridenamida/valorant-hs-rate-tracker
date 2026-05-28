@@ -1,0 +1,10 @@
+# Overwolf build artifacts
+*.opk
+
+# demo / dev only
+demo.html
+.claude/
+
+# OS
+Thumbs.db
+.DS_Store

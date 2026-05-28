@@ -1,0 +1,57 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "HS Tracker",
+    "version": "1.0.0",
+    "minimum-overwolf-version": "0.190.0",
+    "author": "HSTracker",
+    "icon": "icons/icon.png",
+    "icon_gray": "icons/icon_gray.png",
+    "description": "VALORANT Deathmatch Headshot Rate Tracker"
+  },
+  "permissions": [
+    "Hotkeys",
+    "GameEvents",
+    "Extensions"
+  ],
+  "data": {
+    "start_window": "background",
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "event_data": {
+          "game_ids": [21640]
+        },
+        "start_minimized": true
+      }
+    ],
+    "windows": {
+      "background": {
+        "file": "background/background.html",
+        "transparent": false,
+        "resizable": false,
+        "show_in_taskbar": false,
+        "size": { "width": 400, "height": 300 },
+        "is_background_page": true
+      },
+      "overlay": {
+        "file": "overlay/overlay.html",
+        "transparent": true,
+        "resizable": false,
+        "show_in_taskbar": false,
+        "size": { "width": 280, "height": 390 },
+        "start_position": { "top": 20, "left": 20 },
+        "in_game_only": true
+      }
+    },
+    "game_events": [21640],
+    "hotkeys": {
+      "toggle_overlay": {
+        "title": "Toggle HS Tracker Overlay",
+        "action-type": "custom",
+        "default": "Shift+F1"
+      }
+    }
+  }
+}
