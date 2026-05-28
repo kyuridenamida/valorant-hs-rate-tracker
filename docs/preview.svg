@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 430" width="620" height="430">
+  <defs>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; }
+    </style>
+    <!-- SAFE glow filter -->
+    <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- DANGER glow filter -->
+    <filter id="glow-red" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="620" height="430" fill="#0a0d18"/>
+
+  <!-- Labels -->
+  <text x="155" y="22" text-anchor="middle" fill="#2ed573" font-size="11" font-weight="700" letter-spacing="3">SAFE STATE</text>
+  <text x="465" y="22" text-anchor="middle" fill="#ff4757" font-size="11" font-weight="700" letter-spacing="3">DANGER STATE</text>
+
+  <!-- ═══════════════════ SAFE PANEL ═══════════════════ -->
+  <g transform="translate(30, 32)">
+    <!-- Panel background -->
+    <rect width="250" height="382" rx="4" fill="#060a14" stroke="#2ed573" stroke-opacity="0.4" stroke-width="1"/>
+    <rect width="250" height="382" rx="4" fill="none" stroke="#2ed573" stroke-opacity="0.08" stroke-width="3"/>
+
+    <!-- Header -->
+    <rect width="250" height="36" rx="4" fill="#2ed573" fill-opacity="0.06"/>
+    <rect y="36" width="250" height="1" fill="#2ed573" fill-opacity="0.2"/>
+    <text x="14" y="23" fill="#2ed573" font-size="14" font-weight="700" filter="url(#glow-green)">◈</text>
+    <text x="32" y="23" fill="#c8d6e5" font-size="12" font-weight="700" letter-spacing="2">HS TRACKER</text>
+    <rect x="192" y="10" width="42" height="16" rx="2" fill="#2ed573" fill-opacity="0.15" stroke="#2ed573" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="213" y="22" text-anchor="middle" fill="#2ed573" font-size="9" font-weight="700" letter-spacing="1">DM</text>
+
+    <!-- Circle gauge area -->
+    <!-- Track -->
+    <circle cx="125" cy="148" r="52" fill="none" stroke="#0d1b2a" stroke-width="12"/>
+    <!-- Outer ring -->
+    <circle cx="125" cy="148" r="62" fill="none" stroke="#0d1b2a" stroke-width="2"/>
+    <!-- Progress arc (62.5%) offset = 326.73 * (1-0.625) = 122.52 -->
+    <circle cx="125" cy="148" r="52" fill="none" stroke="#2ed573" stroke-width="12"
+      stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="122.52"
+      transform="rotate(-90 125 148)" filter="url(#glow-green)"/>
+    <!-- Glow arc -->
+    <circle cx="125" cy="148" r="52" fill="none" stroke="#2ed573" stroke-width="20"
+      stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="122.52"
+      transform="rotate(-90 125 148)" opacity="0.12"/>
+    <!-- Percentage text -->
+    <text x="125" y="143" text-anchor="middle" fill="#2ed573" font-size="22" font-weight="700" filter="url(#glow-green)">62.5%</text>
+    <text x="125" y="162" text-anchor="middle" fill="#3a5a7a" font-size="9" font-weight="600" letter-spacing="2">HEADSHOT</text>
+
+    <!-- Stats row -->
+    <rect y="222" width="250" height="52" fill="#ffffff" fill-opacity="0.01"/>
+    <!-- KILLS -->
+    <text x="42" y="244" text-anchor="middle" fill="#c8d6e5" font-size="21" font-weight="700">8</text>
+    <text x="42" y="260" text-anchor="middle" fill="#3a5a7a" font-size="8" font-weight="600" letter-spacing="1.5">KILLS</text>
+    <!-- divider -->
+    <rect x="82" y="230" width="1" height="32" fill="#2ed573" fill-opacity="0.12"/>
+    <!-- HS KILLS -->
+    <text x="125" y="244" text-anchor="middle" fill="#ff4757" font-size="21" font-weight="700">5</text>
+    <text x="125" y="260" text-anchor="middle" fill="#3a5a7a" font-size="8" font-weight="600" letter-spacing="1.5">HS KILLS</text>
+    <!-- divider -->
+    <rect x="167" y="230" width="1" height="32" fill="#2ed573" fill-opacity="0.12"/>
+    <!-- HS RATE -->
+    <text x="209" y="244" text-anchor="middle" fill="#2ed573" font-size="21" font-weight="700">62.5%</text>
+    <text x="209" y="260" text-anchor="middle" fill="#3a5a7a" font-size="8" font-weight="600" letter-spacing="1.5">HS RATE</text>
+
+    <!-- Section label -->
+    <line x1="14" y1="286" x2="80" y2="286" stroke="#2ed573" stroke-opacity="0.1" stroke-width="1"/>
+    <text x="125" y="290" text-anchor="middle" fill="#2a4a6a" font-size="8" font-weight="700" letter-spacing="2">RECENT KILLS</text>
+    <line x1="170" y1="286" x2="236" y2="286" stroke="#2ed573" stroke-opacity="0.1" stroke-width="1"/>
+
+    <!-- Kill feed -->
+    <!-- Kill 1 - HS -->
+    <rect x="10" y="298" width="230" height="16" rx="2" fill="#ff4757" fill-opacity="0.06"/>
+    <rect x="10" y="298" width="2" height="16" fill="#ff4757" rx="1"/>
+    <circle cx="20" cy="306" r="3" fill="#ff4757"/>
+    <text x="30" y="310" fill="#8aabb8" font-size="11" font-weight="600">Vandal</text>
+    <rect x="192" y="300" width="20" height="12" rx="2" fill="#ff4757" fill-opacity="0.15"/>
+    <text x="202" y="310" text-anchor="middle" fill="#ff4757" font-size="9" font-weight="700">HS</text>
+    <!-- Kill 2 - Normal -->
+    <rect x="10" y="318" width="230" height="16" rx="2" fill="#2ed573" fill-opacity="0.04"/>
+    <rect x="10" y="318" width="2" height="16" fill="#2ed573" rx="1"/>
+    <circle cx="20" cy="326" r="3" fill="#2ed573"/>
+    <text x="30" y="330" fill="#8aabb8" font-size="11" font-weight="600">Phantom</text>
+    <!-- Kill 3 - HS -->
+    <rect x="10" y="338" width="230" height="16" rx="2" fill="#ff4757" fill-opacity="0.06"/>
+    <rect x="10" y="338" width="2" height="16" fill="#ff4757" rx="1"/>
+    <circle cx="20" cy="346" r="3" fill="#ff4757"/>
+    <text x="30" y="350" fill="#8aabb8" font-size="11" font-weight="600">Operator</text>
+    <rect x="192" y="340" width="20" height="12" rx="2" fill="#ff4757" fill-opacity="0.15"/>
+    <text x="202" y="350" text-anchor="middle" fill="#ff4757" font-size="9" font-weight="700">HS</text>
+    <!-- Kill 4 - HS -->
+    <rect x="10" y="358" width="230" height="16" rx="2" fill="#ff4757" fill-opacity="0.06"/>
+    <rect x="10" y="358" width="2" height="16" fill="#ff4757" rx="1"/>
+    <circle cx="20" cy="366" r="3" fill="#ff4757"/>
+    <text x="30" y="370" fill="#8aabb8" font-size="11" font-weight="600">Ghost</text>
+    <rect x="192" y="360" width="20" height="12" rx="2" fill="#ff4757" fill-opacity="0.15"/>
+    <text x="202" y="370" text-anchor="middle" fill="#ff4757" font-size="9" font-weight="700">HS</text>
+  </g>
+
+  <!-- ═══════════════════ DANGER PANEL ═══════════════════ -->
+  <g transform="translate(340, 32)">
+    <!-- Panel background -->
+    <rect width="250" height="382" rx="4" fill="#060a14" stroke="#ff4757" stroke-opacity="0.5" stroke-width="1"/>
+    <!-- Pulsing border glow -->
+    <rect width="250" height="382" rx="4" fill="none" stroke="#ff4757" stroke-opacity="0.15" stroke-width="4"/>
+
+    <!-- Header -->
+    <rect width="250" height="36" rx="4" fill="#ff4757" fill-opacity="0.08"/>
+    <rect y="36" width="250" height="1" fill="#ff4757" fill-opacity="0.2"/>
+    <text x="14" y="23" fill="#ff4757" font-size="14" font-weight="700" filter="url(#glow-red)">◈</text>
+    <text x="32" y="23" fill="#c8d6e5" font-size="12" font-weight="700" letter-spacing="2">HS TRACKER</text>
+    <rect x="192" y="10" width="42" height="16" rx="2" fill="#ff4757" fill-opacity="0.15" stroke="#ff4757" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="213" y="22" text-anchor="middle" fill="#ff4757" font-size="9" font-weight="700" letter-spacing="1">DM</text>
+
+    <!-- DANGER Banner -->
+    <rect y="37" width="250" height="32" fill="#ff4757" fill-opacity="0.12"/>
+    <rect y="69" width="250" height="1" fill="#ff4757" fill-opacity="0.35"/>
+    <!-- Lightning bolt left -->
+    <polygon points="102,46 97,56 101,56 100,65 105,55 101,55" fill="#ff4757" filter="url(#glow-red)"/>
+    <text x="125" y="60" text-anchor="middle" fill="#ff4757" font-size="13" font-weight="700" letter-spacing="4" filter="url(#glow-red)">DANGER</text>
+    <!-- Lightning bolt right -->
+    <polygon points="148,46 143,56 147,56 146,65 151,55 147,55" fill="#ff4757" filter="url(#glow-red)"/>
+
+    <!-- Circle gauge area (shifted down by 32px for banner) -->
+    <!-- Track -->
+    <circle cx="125" cy="178" r="52" fill="none" stroke="#0d1b2a" stroke-width="12"/>
+    <!-- Outer ring -->
+    <circle cx="125" cy="178" r="62" fill="none" stroke="#0d1b2a" stroke-width="2"/>
+    <!-- Progress arc (33.3%) offset = 326.73 * (1-0.333) = 217.92 -->
+    <circle cx="125" cy="178" r="52" fill="none" stroke="#ff4757" stroke-width="12"
+      stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="217.92"
+      transform="rotate(-90 125 178)" filter="url(#glow-red)"/>
+    <!-- Glow arc -->
+    <circle cx="125" cy="178" r="52" fill="none" stroke="#ff4757" stroke-width="20"
+      stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="217.92"
+      transform="rotate(-90 125 178)" opacity="0.12"/>
+    <!-- Percentage text -->
+    <text x="125" y="173" text-anchor="middle" fill="#ff4757" font-size="22" font-weight="700" filter="url(#glow-red)">33.3%</text>
+    <text x="125" y="192" text-anchor="middle" fill="#3a5a7a" font-size="9" font-weight="600" letter-spacing="2">HEADSHOT</text>
+
+    <!-- Stats row -->
+    <!-- KILLS -->
+    <text x="42" y="270" text-anchor="middle" fill="#c8d6e5" font-size="21" font-weight="700">6</text>
+    <text x="42" y="286" text-anchor="middle" fill="#3a5a7a" font-size="8" font-weight="600" letter-spacing="1.5">KILLS</text>
+    <!-- divider -->
+    <rect x="82" y="256" width="1" height="32" fill="#ff4757" fill-opacity="0.12"/>
+    <!-- HS KILLS -->
+    <text x="125" y="270" text-anchor="middle" fill="#ff4757" font-size="21" font-weight="700">2</text>
+    <text x="125" y="286" text-anchor="middle" fill="#3a5a7a" font-size="8" font-weight="600" letter-spacing="1.5">HS KILLS</text>
+    <!-- divider -->
+    <rect x="167" y="256" width="1" height="32" fill="#ff4757" fill-opacity="0.12"/>
+    <!-- HS RATE -->
+    <text x="209" y="270" text-anchor="middle" fill="#ff4757" font-size="21" font-weight="700">33.3%</text>
+    <text x="209" y="286" text-anchor="middle" fill="#3a5a7a" font-size="8" font-weight="600" letter-spacing="1.5">HS RATE</text>
+
+    <!-- Section label -->
+    <line x1="14" y1="310" x2="80" y2="310" stroke="#ff4757" stroke-opacity="0.1" stroke-width="1"/>
+    <text x="125" y="314" text-anchor="middle" fill="#2a4a6a" font-size="8" font-weight="700" letter-spacing="2">RECENT KILLS</text>
+    <line x1="170" y1="310" x2="236" y2="310" stroke="#ff4757" stroke-opacity="0.1" stroke-width="1"/>
+
+    <!-- Kill feed -->
+    <!-- Kill 1 - Normal -->
+    <rect x="10" y="322" width="230" height="16" rx="2" fill="#2ed573" fill-opacity="0.04"/>
+    <rect x="10" y="322" width="2" height="16" fill="#2ed573" rx="1"/>
+    <circle cx="20" cy="330" r="3" fill="#2ed573"/>
+    <text x="30" y="334" fill="#8aabb8" font-size="11" font-weight="600">Phantom</text>
+    <!-- Kill 2 - Normal -->
+    <rect x="10" y="342" width="230" height="16" rx="2" fill="#2ed573" fill-opacity="0.04"/>
+    <rect x="10" y="342" width="2" height="16" fill="#2ed573" rx="1"/>
+    <circle cx="20" cy="350" r="3" fill="#2ed573"/>
+    <text x="30" y="354" fill="#8aabb8" font-size="11" font-weight="600">Vandal</text>
+    <!-- Kill 3 - HS -->
+    <rect x="10" y="362" width="230" height="16" rx="2" fill="#ff4757" fill-opacity="0.06"/>
+    <rect x="10" y="362" width="2" height="16" fill="#ff4757" rx="1"/>
+    <circle cx="20" cy="370" r="3" fill="#ff4757"/>
+    <text x="30" y="374" fill="#8aabb8" font-size="11" font-weight="600">Sheriff</text>
+    <rect x="192" y="364" width="20" height="12" rx="2" fill="#ff4757" fill-opacity="0.15"/>
+    <text x="202" y="374" text-anchor="middle" fill="#ff4757" font-size="9" font-weight="700">HS</text>
+  </g>
+
+  <!-- Threshold annotation -->
+  <text x="310" y="420" text-anchor="middle" fill="#2a4060" font-size="10" letter-spacing="1">Threshold: 50% (configurable in config.js)</text>
+</svg>
